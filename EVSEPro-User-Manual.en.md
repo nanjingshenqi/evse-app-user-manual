@@ -93,7 +93,7 @@ On Home tap "Add a device" (empty state) or "+" (top-right):
 6. **All set** — shows the device summary; if signed in with Wi-Fi configured, an activation line runs "Your charger is coming online…" → "Your charger is online". Tap "Open <device name>" to jump straight in, or "Add another device".
 
 ![Add-a-charger flow](images/pairing.en.svg)
-<p align="center"><img src="images/screenshots/pairing_start.jpg" width="200" alt="Choose a method"> <img src="images/screenshots/scanning.jpg" width="200" alt="Looking for devices"> <img src="images/screenshots/pairing_done.jpg" width="200" alt="All set"><br><sub>Choose a method · Looking for devices (real device) · All set (real device)</sub></p>
+<p align="center"><img src="images/screenshots/pairing_start_en.jpg" width="200" alt="Choose a method"> <img src="images/screenshots/scanning.jpg" width="200" alt="Looking for devices"> <img src="images/screenshots/pairing_done.jpg" width="200" alt="All set"><br><sub>Choose a method · Looking for devices (real device) · All set (real device) · real-device shots show Chinese UI</sub></p>
 
 
 > If pairing reports the charger "is already paired to an owner" or asks you to forget an old pairing in iOS Settings, a previous binding is still on the charger — see Help center "Pairing & Binding".
@@ -115,7 +115,7 @@ Device page → Status tab → "Now" segment:
 The header shows "My devices" with online/offline counts. Each card: device name (your custom name first) and location/model subtitle; status pill ("Online" green / "Offline" gray / "Shared" blue); channel icons (Bluetooth always, cloud icon = remote-controllable); the model's product render.
 
 If you're next to the device and Bluetooth can connect, the card shows "Online" regardless of internet.
-<p align="center"><img src="images/screenshots/home_grid.jpg" width="300" alt="Home · device grid"><br><sub>Home · device grid</sub></p>
+<p align="center"><img src="images/screenshots/home_grid_en.jpg" width="300" alt="Home · device grid"><br><sub>Home · device grid</sub></p>
 
 
 > In this release only **charger** cards open a control page; home-battery and other types are placeholders.
@@ -155,7 +155,7 @@ Device page → Status tab → "Now" segment. The screen follows the charger's r
 | "Charging paused by the charger" | Charger-side protection or schedule pause | "Resume" ☁️ |
 | "VEHICLE PAUSED" | The vehicle requested the stop (usually reached its own target) | "Stop charging" to end the session ☁️ |
 | "COMPLETE" | Session finished normally | "Charge Again" ☁️ |
-<p align="center"><img src="images/screenshots/now_ready.jpg" width="165" alt="READY"> <img src="images/screenshots/now_charging.jpg" width="165" alt="Charging"> <img src="images/screenshots/now_waiting.jpg" width="165" alt="WAITING"> <img src="images/screenshots/now_complete.jpg" width="165" alt="COMPLETE"><br><sub>READY · Charging · WAITING · COMPLETE</sub></p>
+<p align="center"><img src="images/screenshots/now_ready_en.jpg" width="165" alt="READY"> <img src="images/screenshots/now_charging_en.jpg" width="165" alt="Charging"> <img src="images/screenshots/now_waiting_en.jpg" width="165" alt="WAITING"> <img src="images/screenshots/now_complete_en.jpg" width="165" alt="COMPLETE"><br><sub>READY · Charging · WAITING · COMPLETE</sub></p>
 
 
 ### 4.2 While charging
@@ -219,7 +219,7 @@ The charger has a single schedule slot: enabling "One-time" disables "Recurring"
 - A schedule controls only the start; the end comes from the vehicle or a manual stop;
 - Recurring mode shares one start time across all selected days;
 - Before the start time the device shows "WAITING"; "Stop charging" cancels that wait.
-<p align="center"><img src="images/screenshots/schedule_tab.jpg" width="300" alt="Schedule tab · One-time"><br><sub>Schedule tab · One-time</sub></p>
+<p align="center"><img src="images/screenshots/schedule_tab_en.jpg" width="300" alt="Schedule tab · One-time"><br><sub>Schedule tab · One-time</sub></p>
 
 
 ---
@@ -240,7 +240,7 @@ Per day type (Weekdays / Saturday / Sunday), define multiple time-of-use tiers:
 - Saturday/Sunday can "Import from weekdays"; "Clear all tiers" empties the current day type (both confirm first);
 - Time windows **must not overlap** — validation highlights conflicts in red and blocks saving;
 - The currency symbol follows the system language and region.
-<p align="center"><img src="images/screenshots/rateplan.jpg" width="300" alt="Rate plan editor"><br><sub>Rate plan editor</sub></p>
+<p align="center"><img src="images/screenshots/rateplan_en.jpg" width="300" alt="Rate plan editor"><br><sub>Rate plan editor</sub></p>
 
 
 Once set, History and the "COMPLETE" screen show per-session cost estimates; costs already recorded are never recalculated after a price change.
@@ -261,7 +261,7 @@ Device page → "History" tab. Data lives on this phone — viewable while the d
 - **Chart**: weekly / monthly / yearly energy bars;
 - **Recent sessions**: latest 3, tap for detail;
 - "Share" renders the page as an image; "Export full history (CSV)" for bulk export.
-<p align="center"><img src="images/screenshots/history.jpg" width="300" alt="History tab"><br><sub>History tab</sub></p>
+<p align="center"><img src="images/screenshots/history_en.jpg" width="300" alt="History tab"><br><sub>History tab</sub></p>
 
 
 ### 7.2 All sessions
@@ -312,7 +312,7 @@ Entry: device page → Settings → "Share with others".
 
 **Online share**: the recipient opens "Me → Device sharing" to show their invite code → you tap "Scan invite code" → pick a validity → done ("Charger shared"). Up to 10 active online shares per device; "Revoke" any member from the list.
 
-<p align="center"><img src="images/screenshots/share_manage.jpg" width="300" alt="Share management"><br><sub>Share management · members (real device)</sub></p>
+<p align="center"><img src="images/screenshots/share_manage.jpg" width="300" alt="Share management"><br><sub>Share management · members (real device, Chinese UI)</sub></p>
 
 **Nearby share code** 🔵: next to the charger with Bluetooth connected, tap "Nearby share code" → pick a validity → a QR code is generated for the recipient to scan or paste. It never touches the cloud, doesn't appear in the member list and can't be revoked individually.
 
@@ -355,7 +355,7 @@ Entry: bell icon top-right on Home (red dot = unread). 🔑 Sign-in required.
 - Tap to mark one read; "Mark all read"; "ALL / YESTERDAY / OLDER" time filter; pull to refresh fetches cloud-buffered messages;
 - The "Push notifications" banner enables system push in one tap.
 
-<p align="center"><img src="images/screenshots/messages.jpg" width="300" alt="Message center"><br><sub>Message center (real device)</sub></p>
+<p align="center"><img src="images/screenshots/messages.jpg" width="300" alt="Message center"><br><sub>Message center (real device, Chinese UI)</sub></p>
 
 > Messages can't be deleted, and tapping one doesn't navigate to the device. The 10 alarm types are explained in Help center "Alarms".
 
@@ -383,7 +383,7 @@ Device page → "Settings" tab. The header card shows the device name, online st
 | Unpair this device | 👤 🔵 | §11.4 |
 
 > Screen brightness, temperature unit and start method are Bluetooth-only; remote attempts get "Move closer and try again".
-<p align="center"><img src="images/screenshots/settings.jpg" width="300" alt="Device settings (owner view)"><br><sub>Device settings (owner view)</sub></p>
+<p align="center"><img src="images/screenshots/settings_en.jpg" width="300" alt="Device settings (owner view)"><br><sub>Device settings (owner view)</sub></p>
 
 
 ### 11.2 About this charger
@@ -418,7 +418,7 @@ Settings bottom → "Unpair this device" → confirm → the app sends the unbin
 ---
 
 ## 12 Account & personalization {#account}
-<p align="center"><img src="images/screenshots/profile.jpg" width="300" alt=""Me" page"><br><sub>"Me" page</sub></p>
+<p align="center"><img src="images/screenshots/profile_en.jpg" width="300" alt=""Me" page"><br><sub>"Me" page</sub></p>
 
 
 ### 12.1 Sign-in & registration
@@ -426,7 +426,7 @@ Settings bottom → "Unpair this device" → confirm → the app sends the unbin
 - **Email registration**: name + email + 6-digit email code + password (min 8, strength meter) + Terms of Service and Privacy Policy consent;
 - **Email sign-in**: email + password; **Sign in with Apple**: one tap on the sign-in page;
 - **Forgot password**: enter the email → "Send reset link" → finish in the email (link valid 30 minutes; check spam). The app has no old-password → new-password form.
-<p align="center"><img src="images/screenshots/signin.jpg" width="300" alt="Sign-in"><br><sub>Sign-in</sub></p>
+<p align="center"><img src="images/screenshots/signin_en.jpg" width="300" alt="Sign-in"><br><sub>Sign-in</sub></p>
 
 
 ### 12.2 Edit profile ("Me" → avatar card) 🔑
