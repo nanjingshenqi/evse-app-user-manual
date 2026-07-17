@@ -1185,6 +1185,8 @@
       <li>After repeated failures a "Force remove" escape hatch appears: clears only this phone and account records — the charger keeps its pairing info (the dialog says so honestly);</li>
       <li>Shared users get "Remove this shared device" instead: local removal only.</li>
     </ul>
+    <div class="note warn zh"><b>iOS 重新绑定特别说明</b>：解绑后若要把这台充电桩重新绑定到 iPhone，请先到系统「设置 → 蓝牙」，点击该充电桩（名称形如 EVSE-XXXXXX）旁的 ⓘ 并选择「忽略此设备」，再回 App 重新配对。系统里残留的旧蓝牙配对不会随解绑自动清除，不忽略会导致重新配对反复连接失败。</div>
+    <div class="note warn en"><b>iOS re-pairing note</b>: to bind this charger to an iPhone again after unpairing, first open iOS <b>Settings → Bluetooth</b>, tap ⓘ next to the charger (named like EVSE-XXXXXX) and choose <b>Forget This Device</b>, then pair again in the app. iOS keeps the old Bluetooth pairing after the unbind; without forgetting it, re-pairing keeps failing to connect.</div>
     <div class="note zh"><b>换手机</b>：旧手机上先解绑、新手机重新配对是最干净的路径；旧手机不可用时，新手机登录同一账号后打开设备卡片，App 会自动恢复控制能力（要求该设备完成过联网激活）。</div>
     <div class="note en"><b>Switching phones</b>: unpair on the old phone, then pair on the new one. If the old phone is gone, sign in on the new phone and open the device card — the app restores control automatically (requires the device to have activated online at least once).</div>
   </section>

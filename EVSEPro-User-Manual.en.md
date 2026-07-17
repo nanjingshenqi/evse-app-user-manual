@@ -410,6 +410,9 @@ Settings bottom → "Unpair this device" → confirm → the app sends the unbin
 - After repeated failures a "Force remove" escape hatch appears: clears only this phone and the account records — the charger keeps its pairing info (the dialog says so honestly);
 - Shared users get "Remove this shared device" instead: local removal only, the owner's share record is unaffected.
 
+> ⚠️ **iOS re-pairing note**: to bind this charger to an iPhone again after unpairing, first open iOS **Settings → Bluetooth**, tap ⓘ next to the charger (named like EVSE-XXXXXX) and choose **Forget This Device**, then pair again in the app. iOS keeps the old Bluetooth pairing after the unbind; without forgetting it, re-pairing keeps failing to connect.
+
+
 **Switching phones**: unpair on the old phone, then pair on the new one — the cleanest path. If the old phone is gone, sign in on the new phone and open the device card; the app restores control automatically (requires the device to have activated online at least once).
 
 ---
