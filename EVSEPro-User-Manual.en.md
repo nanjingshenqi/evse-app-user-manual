@@ -176,6 +176,8 @@ Session summary: energy delivered, cost (estimated from your rate plan), CO₂ a
 
 When the device isn't reachable, an overlay covers the metrics:
 
+<details><summary><b>Show overlay reference</b></summary>
+
 | Overlay | Meaning / action |
 |---|---|
 | "Connecting…" | Establishing the link or waiting for first data — just wait |
@@ -183,7 +185,11 @@ When the device isn't reachable, an overlay covers the metrics:
 | Wrong charger connected | "Search again" to find the right one |
 | "Connection failed" | Tap "Retry" |
 
+</details>
+
 ### 4.6 Rejected or unconfirmed commands
+
+<details><summary><b>Show prompt reference</b></summary>
 
 - "Plug in the connector or make sure the vehicle is ready, then try again." — vehicle not ready;
 - "The charger is offline right now, so it can't run this command." — check power and home network;
@@ -191,6 +197,8 @@ When the device isn't reachable, an overlay covers the metrics:
 - "We couldn't confirm whether the command went through. Please try again." — **not a failure**; just a confirmation timeout. The screen updates once the device responds;
 - "Access credentials outdated" / "Access removed" — see §9.4;
 - Device unpaired (factory reset / unbound elsewhere) — follow the "Remove device" prompt, then pair again.
+
+</details>
 
 ---
 
@@ -234,12 +242,16 @@ Entry: "Me → Electricity rate / Vehicle efficiency", or the setup cards on the
 
 Per day type (Weekdays / Saturday / Sunday), define multiple time-of-use tiers:
 
+<details><summary><b>Show editing & validation details</b></summary>
+
 - Each tier = name + price + color + one or more time windows;
 - A live overview card shows tier prices, a 24-hour price curve and window summaries;
 - "Add tier" creates; tapping a tier opens the editor ("Delete tier" available);
 - Saturday/Sunday can "Import from weekdays"; "Clear all tiers" empties the current day type (both confirm first);
 - Time windows **must not overlap** — validation highlights conflicts in red and blocks saving;
 - The currency symbol follows the system language and region.
+
+</details>
 <p align="center"><img src="images/screenshots/rateplan_en.jpg" width="300" alt="Rate plan editor"><br><sub>Rate plan editor</sub></p>
 
 
@@ -286,10 +298,14 @@ Animated flow between solar / grid / home / charger nodes. The charger node show
 
 ### 8.2 Load balancing configuration 👤 🔵 (owner only, Bluetooth-only)
 
+<details><summary><b>Show configuration details</b></summary>
+
 - "Dynamic load balancing" master switch;
 - "Mode": Standard / Pure solar / Grid restriction / Hybrid (the latter two on solar models 🔧 only);
 - With DLB on, three sliders appear: **Max into house** (6–100 A), **Grid limit** (0–100 A, 0 = unlimited), **Min charging current** (from 6 A);
 - "Charging current" shows the live value plus the active constraint ("Limited by household load", "Tracking solar surplus", "At configured limit", …).
+
+</details>
 
 Away from the charger these controls fail immediately with "Couldn't reach the charger over Bluetooth. Move closer and try again."
 
@@ -341,8 +357,12 @@ Shared devices carry a blue "Shared" pill on Home; devices imported via nearby s
 
 ### 9.4 When access changes
 
+<details><summary><b>Show details</b></summary>
+
 - **"Access removed"**: the share was revoked or expired; confirming exits the device page. Ask the owner to share again.
 - **"Access credentials outdated"**: the device's binding changed (e.g. the owner revoked another share); tap "Refresh credentials" — "Credentials updated — please retry". Owners and shared users can both encounter this.
+
+</details>
 
 ---
 
@@ -396,19 +416,27 @@ Entry: Settings → "Version". **Stay on the page with Bluetooth connected throu
 
 Flow: check → "current X → Y • N MB" → "Update now" → "Downloading…" → "Transferring to charger…" → "Installing…" → "Finishing up…" (charger reboots) → "Update complete".
 
+<details><summary><b>Show update notes</b></summary>
+
 - The app blocks auto-lock and the back gesture during transfer; leaving prompts a confirmation;
 - The install-time reboot is normal; the app keeps confirming the new version (up to ~5 min). If told to pull-to-refresh later, revisit the page to verify;
 - Failures show a reason (insufficient storage / verification failed / timeout …) with "Retry"; if it keeps failing, power-cycle the charger and retry;
 - Without Bluetooth the page shows "Update unavailable — Connect to your charger over Bluetooth to update its firmware."
 
+</details>
+
 ### 11.4 Unpairing 👤 🔵
 
 Settings bottom → "Unpair this device" → confirm → the app sends the unbind command to the charger and releases the cloud binding → the device leaves Home.
+
+<details><summary><b>Show what unpairing does</b></summary>
 
 - Unpairing clears this device's charging history, schedules, Wi-Fi name, connection preference, display and start-method settings from the app — a privacy design: after handover, the new owner sees none of your usage;
 - It requires reaching the device (Bluetooth preferred); away from the charger it fails with a prompt to retry nearby;
 - After repeated failures a "Force remove" escape hatch appears: clears only this phone and the account records — the charger keeps its pairing info (the dialog says so honestly);
 - Shared users get "Remove this shared device" instead: local removal only, the owner's share record is unaffected.
+
+</details>
 
 > ⚠️ **iOS re-pairing note**: to bind this charger to an iPhone again after unpairing, first open iOS **Settings → Bluetooth**, tap ⓘ next to the charger (named like EVSE-XXXXXX) and choose **Forget This Device**, then pair again in the app. iOS keeps the old Bluetooth pairing after the unbind; without forgetting it, re-pairing keeps failing to connect.
 
@@ -431,10 +459,14 @@ Settings bottom → "Unpair this device" → confirm → the app sends the unbin
 
 ### 12.2 Edit profile ("Me" → avatar card) 🔑
 
+<details><summary><b>Show profile & account details</b></summary>
+
 - **Nickname** (max 20 chars) and **avatar** (presets / camera / library / reset) — stored on this phone only;
 - "Reset password": pre-fills your email, sends the reset link;
 - "Sign out": confirm to sign out; sign back in anytime;
 - "Delete account": **hold for 1.2 s**. Blocked while devices are still bound ("unbind first"); once confirmed, the account and all charging data are permanently deleted.
+
+</details>
 
 ### 12.3 Language & appearance
 
