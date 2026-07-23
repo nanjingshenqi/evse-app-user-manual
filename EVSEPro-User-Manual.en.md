@@ -292,26 +292,58 @@ Everything about one session: status (Completed / Charging / Stopped), energy, c
 
 Device page → Status tab → "Energy" segment. 🔧 Only on models with dynamic load balancing (DLB).
 
+**What dynamic load balancing (DLB) solves**: a home's main breaker has limited capacity — a charger at full power while big appliances run (AC, induction hob, water heater) can trip it. With DLB on, the charger senses whole-home consumption in real time through the CT current-sensing box and adjusts its charging current automatically — yielding when the house is busy, speeding up when it's quiet, keeping total load inside the safe envelope with no manual action.
+
 ### 8.1 Live energy flow (read-only, visible to everyone)
 
-Animated flow between solar / grid / home / charger nodes. The charger node shows live power; grid and solar current readings require a CT clamp and load balancing enabled — otherwise "—".
+Animated flow between solar / grid / home / charger nodes. The charger node shows live power; grid and solar current readings come from the optional CT current-sensing box — they show real values only with the box installed and load balancing on, otherwise "—".
 
 <p align="center"><img src="images/screenshots/energy_flow_en.jpg" width="300" alt="Live energy flow"><br><sub>Energy segment · live energy flow</sub></p>
 
 ### 8.2 Load balancing configuration 👤 🔵 (owner only, Bluetooth-only)
 
-<details><summary><b>Show configuration details</b></summary>
+The Load balancing card offers the "Dynamic load balancing" master switch and the "Mode" picker; with DLB on, the allocation card's three sliders appear.
 
-- "Dynamic load balancing" master switch;
-- "Mode": Standard / Pure solar / Grid restriction / Hybrid (the latter two on solar models 🔧 only);
-- With DLB on, three sliders appear: **Max into house** (6–100 A), **Grid limit** (0–100 A, 0 = unlimited), **Min charging current** (from 6 A);
-- "Charging current" shows the live value plus the active constraint ("Limited by household load", "Tracking solar surplus", "At configured limit", …).
+**The four modes** ("Pure solar" and "Hybrid" appear on solar models 🔧 only):
+
+| Mode | Behavior | Best for |
+|---|---|---|
+| Standard | Dynamic limiting by headroom — "Max into house" minus household load | Most homes without solar |
+| Pure solar | Charges from solar surplus only, never draws from the grid; slows and may pause when surplus drops | Daytime solar-only charging |
+| Grid restriction | Limits against your "Grid limit" | Metered / contracted supply caps |
+| Hybrid | Solar first; tops up from the grid to hold "Min charging current" | Solar homes that still need progress |
+
+<details><summary><b>How to set the three sliders</b></summary>
+
+| Slider | Meaning | Guidance |
+|---|---|---|
+| Max into house (6–100 A) | The most current the charger may draw | Stay within your main breaker / service capacity — ask an electrician if unsure |
+| Grid limit (0–100 A, 0 = unlimited) | Total grid-intake current cap | Set it when your meter or supply contract has a cap |
+| Min charging current (from 6 A) | Floor current (6 A is the lowest the charging protocol allows) | Usually leave the default; in Hybrid it guarantees progress |
 
 </details>
 
 <p align="center"><img src="images/screenshots/energy_dlb_en.jpg" width="380" alt="Current allocation card"><br><sub>Current allocation card</sub></p>
 
 Away from the charger these controls fail immediately with "Couldn't reach the charger over Bluetooth. Move closer and try again."
+
+### 8.3 Charging slowed or paused? Read the constraint line
+
+With DLB active the charging current follows household consumption — that's the feature working, not a fault. The "Charging current" row at the bottom of the allocation card shows the live value and why:
+
+<details><summary><b>Show the constraint reference</b></summary>
+
+| Text shown | Meaning | Action needed |
+|---|---|---|
+| At configured limit | Not dynamically constrained — at your configured cap | None |
+| Limited by household load | Other appliances are busy; the charger is yielding | None — recovers automatically |
+| Limited by grid restriction | Your "Grid limit" is in effect | None — behaving as configured |
+| Tracking solar surplus | Following solar surplus (Pure solar / Hybrid) | None |
+| Holding minimum charge current | Surplus is low; holding the floor current | None |
+| Meter unavailable — safe limit | CT box readings unavailable; degraded to a safe current | Check the CT box wiring and power |
+| Paused by load balancing | Household load too high; charging paused temporarily | None — resumes automatically |
+
+</details>
 
 ---
 
