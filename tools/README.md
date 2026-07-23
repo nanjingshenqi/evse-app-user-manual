@@ -7,6 +7,7 @@
 | `build_diagrams.py` | 4 张示意图单源生成：master（双语文本 + CSS 变量）→ ① index.html 内联（随语言/明暗切换）② `images/*.{zh,en}.svg` 独立浅色文件。改图只改 master，跑一遍两种形态同步。**改完必须渲染目检**（`rsvg-convert` 出 PNG 过眼，手排坐标容易压框）。 |
 | `shoot.sh` / `shoot2.sh` | 模拟器中文截图批（deeplink 免点按配方）。 |
 | `shoot_en.sh` | 英文批（先 `defaults write <bid> EVSEAppLanguage en`）。 |
+| `shoot_dlb.sh` / `shoot_dlb_en.sh` | DLB 能耗段中/英截图：`dev/wallbox?dlb=1`（mock 种 DLB 演示遥测块 + 注入 `bs40-22-eu-dlb-solar` 能力）；第二张带 `EVSE_QA_SCROLL_Y=620` 滚到分配卡，成图后 PIL `crop((0, 465, 1206, 1520))` 出特写。 |
 | `embed_shots.py` | 截图 → 640w JPEG q82 → `images/screenshots/` + index.html base64 内嵌 + md 引用。 |
 
 ## 截图配方要点（App 仓 DEBUG 构建）
